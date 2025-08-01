@@ -1,12 +1,21 @@
-# React + Vite
+# String Calculator TDD Kata
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements the String Calculator kata using Test-Driven Development (TDD) as part of the Incubyte assessment.
 
-Currently, two official plugins are available:
+## Steps Implemented
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Empty string returns 0
+2. Single number returns itself
+3. Two numbers return sum
+4. Multiple numbers return sum
+5. Handle newline as delimiter
+6. Support custom delimiter
+7. Throw error for single negative number
+8. Throw error for multiple negative numbers
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm test
+```
