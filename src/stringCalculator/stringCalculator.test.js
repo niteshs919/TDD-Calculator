@@ -16,4 +16,21 @@ describe("String Calculator TDD", () => {
   test("Multiple numbers returns sum", () => {
     expect(add("1,2,3,4")).toBe(10);
   });
+
+  test("Handles newline as delimiter", () => {
+    expect(add("1\n2,3")).toBe(6);
+  });
+
+  test("Supports custom delimiter", () => {
+    expect(add("//;\n1;2")).toBe(3);
+    expect(add("//|\n2|3|4")).toBe(9);
+  });
+
+  test("Throws error for single negative number", () => {
+    expect(() => add("-1")).toThrow("negative numbers not allowed -1");
+  });
+
+  test("Throws error for multiple negative numbers", () => {
+    expect(() => add("2,-4,-5")).toThrow("negative numbers not allowed -4,-5");
+  });
 });
